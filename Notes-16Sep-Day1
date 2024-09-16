@@ -121,7 +121,9 @@ Take a file which is in local repo
 
 # vim index1.html
 
-add any data & save the file
+press i to insert data
+
+press ESC key and then press :wq ==> press enter key  ==> to save the file
 
 # git status
 
