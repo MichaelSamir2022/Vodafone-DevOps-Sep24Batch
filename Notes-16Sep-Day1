@@ -183,6 +183,56 @@ nano editor will open
 enter some message 
 save the file by press CTRL X ==> press y ==> press enter key
 
+==========================================================
+
+Create a feature branch in git  and switch to the branch
+
+========================================
+
+# git branch
+
+Create a new branch
+
+# git branch feature1
+
+Switch to the new branch
+
+# git checkout feature1
+
+[OR]
+
+Create a new branch and switch to the branch also
+
+# git checkout -b feature2
+
+3. Merge the commits/files of new branch to master
+
+Before merging always switch to the destination branch
+
+# git checkout master
+
+# git merge feature1 master
+
+< git merge sourcebranch destinationbranch>
+
+
+Check which branches are merged to master
+
+git branch -a --merged master
+
+Check which branches are not merged to master
+
+git branch -a --no-merged master
+
+
+4. Delete a branch which is not merged with master branch
+
+# git branch -D <branchname>
+
+Delete a branch whose commits have been merged with the master branch
+
+# git branch -d feature1
+
 
 
 
