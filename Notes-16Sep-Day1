@@ -177,3 +177,13 @@ Revert command in GIT
 > save the file. Revert will be complete and a new commit id will be generated
 
 # git revert <deletioncommitid>
+
+nano editor will open
+
+enter some message 
+save the file by press CTRL X ==> press y ==> press enter key
+
+
+
+
+
