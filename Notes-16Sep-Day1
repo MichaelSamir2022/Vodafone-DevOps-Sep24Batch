@@ -199,6 +199,16 @@ Switch to the new branch
 
 # git checkout feature1
 
+Add new files on the branch
+
+# touch file1
+
+# git add .
+
+# git commit -m "added on feature branch"
+
+# git log --oneline
+
 [OR]
 
 Create a new branch and switch to the branch also
