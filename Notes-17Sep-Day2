@@ -512,4 +512,4 @@ Name is preffered as Jenkinsfile
 This is the file in which we will maintain pipeline code Version control
 
 
-Jenkins--> pipelinetemplate--> fetch jenkins file--> execute pipeline code for you.
+Jenkins--> pipelinetemplate--> go to pipleine section --> select script form SCM --> in SCM --> select git --> give the repo as https://github.com/Sonal0409/DevOpsCodeDemo.git ---> fetch jenkins file--> execute pipeline code for you.
