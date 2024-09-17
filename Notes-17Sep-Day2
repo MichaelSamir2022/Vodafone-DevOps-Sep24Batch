@@ -101,8 +101,10 @@ Push data from local to remote
 
 # git push origin master
 
-username : github
-password: token
+username : just give the personal access token
+password:  press enter key
+
+Files and commits will be pushed
 
 ================================
 
