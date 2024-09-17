@@ -155,6 +155,38 @@ apt-get update
 
 apt-get install jenkins -y
 
+# cat /var/lib/jenkins/config.xml
+
+
+SETUP Jenkins DashBoard:
+================================
+
+> Open browser on the LAB
+
+
+
+
+Go to your terminal and type below command
+
+# cat /var/lib/jenkins/secrets/initialAdminPassword
+
+We will get the password. Copy the password and paste it on the jenkins dashboard
+
+
+
+
+
+
+
+
+Pls enter username : admin
+Password as admin
+Retype password : admin
+Email : admin@gmail.com
+
+Click on save and continue
+Click on finish
+You will on the jenkins dashboard
 
 
 
