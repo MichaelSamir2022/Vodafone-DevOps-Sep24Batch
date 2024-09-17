@@ -1,3 +1,58 @@
+Rebase Merge Strategy:
+===============================
+
+Create a branch using below command
+
+# git checkout -b feature1
+
+This branch is based on master branch. It will have same commits as that of master branch
+
+Now go to master branch again:
+
+# git checkout master
+
+Do a new commit on master
+
+# touch file_master
+
+# git add .
+
+# git commit -m "done on master branch"
+
+
+Switch to feature1 branch and create a new commit
+
+# git checkout feature1
+
+Do a new commit on master
+
+# touch file_branch
+
+# git add .
+
+# git commit -m "done on feature1 branch"
+
+
+Now instaed of merging we will do another merge strategy called as Rebase. In this stratgy we will re-arange the commit history.
+From the bottom we will have all the commits of master/base branch then new commits of feature branch
+This way we are re-arranging the base of feature branch.
+
+# git rebase master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 GITHUB:
 
 ==================================================
