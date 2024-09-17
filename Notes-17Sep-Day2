@@ -66,11 +66,7 @@ Personal access tokens (classic) function like ordinary OAuth access tokens. The
 
 1. Create a personal access token:
 
- > clcik on user menu which is on the extreme right
- > click on settings in that
- > scroll down, on left side you will see developer settings -- click on it
- > on left side 3 rd option --> personla Access token
- > select tokens(classic)
+ > go to this link : https://github.com/settings/tokens
  > click on generate new token --> click on generate new token classic
  > in note --give token name as token19
  > expiration --> leave as is
