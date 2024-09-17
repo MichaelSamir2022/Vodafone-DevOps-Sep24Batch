@@ -133,6 +133,19 @@ Forking - complete
 
 ==========================================
 
+Remove the current version jenkins:
+=======================================
+sudo service jenkins stop
+
+sudo apt-get remove --purge jenkins
+
+sudo apt-get autoremove jenkins
+
+
+
+
+
+
 Jenkins Demo:
 
 1. Create a Freestyle job in jenkins
