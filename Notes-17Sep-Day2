@@ -39,7 +39,7 @@ This way we are re-arranging the base of feature branch.
 
 # git rebase master
 
-
+# git log --oneline
 
 
 
