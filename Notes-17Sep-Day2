@@ -284,7 +284,7 @@ URls or location from ehre we have to download the plugin or dependency
 
 Demo 3: Jenkins + maven integration:
 
-Jenkins--> Manage Jenkins-->Global Tool configuration
+Jenkins--> Manage Jenkins-->Tools
 
 Under GIT==> leave it same 
 
