@@ -135,6 +135,9 @@ Forking - complete
 
 Remove the current version jenkins:
 =======================================
+
+# cd 
+
 sudo service jenkins stop
 
 sudo apt-get remove --purge jenkins
