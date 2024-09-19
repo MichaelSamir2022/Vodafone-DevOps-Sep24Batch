@@ -1,0 +1,52 @@
+Docker:
+********************************************
+Lab already has docker installed
+
+$ sudo su -
+$ docker --version
+
+Start the docker engine
+
+$ systemctl start docker
+
+$ systemctl status docker
+
+Docker Images:
+*************************
+
+Demo1: Pull Image from docker hub to your local docker host
+
+docker pull imagename
+
+$ docker pull ubuntu
+
+Docker will pull the image with tag as latest from docker hub library
+
+OR
+
+docker pull imagename:tagname
+
+$ docker pull ubuntu:20.04
+
+Will pull ubuntu image of tag 20.04
+
+2. Check the list of  images pulled from docker host
+
+$ docker images
+
+OR
+
+$ docker image ls
+
+3. Search for images:
+**************
+$ docker search hello-world
+
+4. Delete the images from local docker host
+*******************
+$ docker rmi ubuntu
+
+$ docker rmi ubuntu:20.04
+
+5. Run an Image to create a container
+****************
