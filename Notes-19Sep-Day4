@@ -236,6 +236,42 @@ run your custom Image
 # docker run -it --name cont2 myimage01
 
 
+===========================================================
+Dockerfile
+===========================================================
+dockerfile or Dockerfile 
+It has no extensions
+syntax:
+keyword argument
+
+keywords are written in uppercase
+
+# is a comment 
+
+FROM : define the name of the docker base Image on which we have to customization 
+
+RUN : we will provide list of Linux commands that will install/upgrade packages on the container 
+OR run any linux command 
+This keyword is repeated in dockerfile 
+The commands that are given with run keyword will be executed and completed when the container is launched.
+
+Label : define the maintainer/author of the dockerfile 
+
+ENV: define variables and give values to them. These variables can be used in the dockerfile 
+Example: 
+ENV NGINX_VERSION   1.27.1
+refer to variable ${NGINX_VERSION}
+
+COPY : copy file from local server to containers directory but it cannot copy .tar files
+
+ADD: copy file from local server to containers directory
+and can also copy .tar files.
+
+EXPOSE : exposes the container to a port number 
+
+CMD: a command that will be executed once the container is launched. These commands run to start an application on the container 
+
+
 
 
 
