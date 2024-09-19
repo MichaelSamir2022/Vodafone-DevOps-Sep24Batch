@@ -1,0 +1,111 @@
+run an Image 
+container should be running 
+we have to use 
+Docker Modes 
+
+Foreground Mode: (-it)
+========================
+-i : interactive
+-t: terminal
+
+docker run -it ubuntu
+
+> a docker container will be created 
+> container will be up and running 
+> the root user will be attached to the terminal of the container
+> user root will be inside the container 
+
+Come out of container :
+
+Execute CRTLpq : you will be out of container & container continues to run 
+
+You can attach to the terminal to the container :
+
+# docker attach u2
+
+Execute Exit : you will be out of container & Container is Existed/stopped
+
+
+Detached Mode: (-d)
+===========================
+
+We prefer running containers in detached mode 
+
+docker run -d --name web nginx
+
+
+> a docker container will be created 
+> container will be up and running 
+> the root user will NOT be attached to the terminal of the container
+> container will continue to run in background, user will be attached to the VM server only 
+
+
+
+Accessing the container:
+==========================
+
+Port mapping or port forwarding
+*****************
+By default docker container is ready to be accessed by the user, 
+it is the user internet who cannot reach the container.
+Port mapping/port forwarding is  a concept in docker that allows a user 
+to access the container from browser of his machine
+Port mapping has to be done at the run time of container
+If the container is already running/exited, you cannot do port forwarding
+In port forwarding we have to provide mapping between 2 ports
+Systemport - any free port on the lab machine
+Containerport : port on which container is exposed to.
+ You can get this information from the Image, look for expose keyword on the image in docker hub
+
+
+
+Take ubuntu Image  --> run it --> Container --> do customizations -->commit a container to a custom Image
+
+Run the custom image  --> container with customizations 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dockerfile or Dockerfile 
+It has no extensions
+syntax:
+keyword argument
+
+keywords are written in uppercase
+
+# is a comment 
+
+FROM : define the name of the docker base Image on which we have to customization 
+
+RUN : we will provide list of Linux commands that will install/upgrade packages on the container 
+OR run any linux command 
+This keyword is repeated in dockerfile 
+The commands that are given with run keyword will be executed and completed when the container is launched.
+
+Label : define the maintainer/author of the dockerfile 
+
+ENV: define variables and give values to them. These variables can be used in the dockerfile 
+Example: 
+ENV NGINX_VERSION   1.27.1
+refer to variable ${NGINX_VERSION}
+
+COPY : copy file from local server to containers directory but it cannot copy .tar files
+
+ADD: copy file from local server to containers directory
+and can also copy .tar files.
+
+EXPOSE : exposes the container to a port number 
+
+CMD: a command that will be executed once the container is launched. These commands run to start an application on the container 
+
+USER: Once container is created form Image as which user we can loginto container
