@@ -348,9 +348,9 @@ CMD ["python3", "/tmp/app.py"]
 
 save the file
 
-# docker build -t myimage01 .
+# docker build -t myimagepython .
 
-# docker run -d -P myimage01
+# docker run -d -P myimagepython
 
 
 
