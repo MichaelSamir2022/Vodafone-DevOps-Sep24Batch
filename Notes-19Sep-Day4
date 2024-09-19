@@ -318,6 +318,9 @@ go to browser and give localhost:8787
 
 Demo for python dockerfile
 
+# mkdir mypythondeploy
+# cd mypythondeploy
+
 # vim app.py
 
 from flask import Flask 
