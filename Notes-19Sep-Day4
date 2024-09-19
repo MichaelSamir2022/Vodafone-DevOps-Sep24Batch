@@ -352,6 +352,30 @@ save the file
 
 # docker run -d -P myimagepython
 
+====================================================
+
+# vim dockerfileuser
+
+FROM ubuntu:20.04
+RUN apt-get update
+RUN apt-get install sudo -y
+RUN groupadd -r alex
+RUN useradd -r -g alex alex
+RUN mkdir /home/alex
+USER alex
+CMD ["/bin/bash"]
+
+
+Save the file
+
+# docker build -t myimageuser -f dockerfileuser .
+
+# docker images
+
+# docker run -it myimageuser
+
+you will attached to container as alex
+
 
 
 
