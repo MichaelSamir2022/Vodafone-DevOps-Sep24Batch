@@ -50,3 +50,69 @@ $ docker rmi ubuntu:20.04
 
 5. Run an Image to create a container
 ****************
+
+Docker run Imagename
+
+
+$ docker run ubuntu
+
+Run command: will first check locally if image ubuntu is available or not
+
+If image is not available locally
+
+RUn command will automatically
+
+> pull image from docker hub
+> run the image to launch a container
+> user will be inside the container process
+> user will not be able to see the host machine cursor
+
+
+6. See the list of container created
+
+$ docker ps -a
+
+
+7.  Launch a container from an Image and container should be up & running
+
+When we execute the run command we have to mention in which mode we want to launch the container
+
+Foreground mode
+
+$ docker run -it imagename
+
+-i : interactive
+-t: terminal
+
+$ docker run -it ubuntu
+
+Container will be launched
+Will be up & running
+User will be attached to the container
+That is , user will be on the container terminal
+
+Whenever you are attached to the terminal of the container, using the following options you will come out of the container:
+
+Ctl pq
+
+User will come out of the container and container will be still up and running
+
+exit
+
+User will come out of the container and container will be exited
+
+Attach to the terminal of the container again:
+
+$ docker attach containerid/containername
+
+Execute exit command to comout of container
+
+User will come out of the container and container will be exited
+
+To start a exited container:
+
+$ docker start containerid/name
+
+To stop a running container
+
+$ docker stop containerid/name
