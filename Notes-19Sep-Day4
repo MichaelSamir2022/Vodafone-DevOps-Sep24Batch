@@ -292,6 +292,14 @@ CMD ["nginx", "-g", "daemon off;"]
 
 save the file
 
+vim index.html
+
+<h1> file from dockerfile </h1>
+
+Save the file (:wq!)
+
+
+
 Build the dockerfile into an Image
 
 # docker build -t mynginx .
