@@ -210,6 +210,42 @@ $ docker system prune –all
 Delete all images
  Delete exited container
 ============================================
+Commit a container to an Image:
+==========================================
+
+# docker run -it --name cont1 ubuntu
+
+# touch app.war
+
+# mkdir demo
+
+# apt-get update && apt-get install git -y
+
+come out of cotainer using CTRL pq
+
+# docker ps -aq
+
+Commit container to an Image
+
+# docker commit cont1 myimage01
+
+run your custom Image
+
+# docker images
+
+# docker run -it --name cont2 myimage01
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
