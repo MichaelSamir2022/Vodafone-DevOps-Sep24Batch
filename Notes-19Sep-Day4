@@ -148,7 +148,68 @@ Attach to the terminal of a web container
 
 give exit  -> to comeout 
 
+========================================================
 
+Describe all Details of the container created
+****************
+
+Inspect is the command that will describe all the details of the container in json format
+
+$ docker inspect containername/id
+
+Port mapping or port forwarding
+*****************
+By default docker container is ready to be accessed by the user, it is the user internet who cannot reach the container.
+Port mapping/port forwarding is  a concept in docker that allows a user to access the container from browser of his machine
+Port mapping has to be done at the run time of container
+If the container is already running/exited, you cannot do port forwarding
+In port forwarding we have to provide mapping between 2 ports
+Systemport - any free port on the lab machine
+Containerport : port on which container is exposed to. You can get this information from the Image, look for expose keyword on the image in docker hub
+
+
+Method 1: user defined custom port mapping : 
+
+ -p : this option will perform port mapping
+
+$ docker run –name n2 -d -p Systemport:containerport  nginx
+
+$ docker run –name n2 -d -p 8282:80 nginx
+$ docker port n2
+
+
+Method 2:  docker provided random port mapping : -P
+
+$ docker run -d –name web -P httpd
+$ docker port web
+
+In this case user will not provide any port information
+
+Docker will do random free port from host machine and map it to your container port
+
+Access the container OR execute a command on the container from the host machine
+=====================================================================
+Take a container name which is running and which has port mapping done
+
+$ docker exec -it containername command
+
+$ docker exec -it web bash
+
+
+Clean up docker host:
+************************
+Delete  all containers at once
+
+$ docker rm -f $(docker ps -aq)
+$ docker rm -f containername
+
+Delete all images:
+
+$ docker system prune –all
+
+Delete all images
+ Delete exited container
+============================================
 
 
 
