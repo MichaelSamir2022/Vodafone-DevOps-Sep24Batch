@@ -134,3 +134,27 @@ Delete a Container from the host machine
 $ docker rm -f containername/conatinerid
 $ docker rm -f n1
 $ docker ps -a : no container will be there
+
+
+Attach to the terminal of a web container
+
+========================================
+
+# docker rm -f $(docker ps -aq)
+
+# docker run -d --name web nginx
+
+# docker exec -it web bash
+
+give exit  -> to comeout 
+
+
+
+
+
+
+
+
+
+
+
