@@ -116,3 +116,21 @@ $ docker start containerid/name
 To stop a running container
 
 $ docker stop containerid/name
+
+
+Detached mode (-d)
+====================================================
+
+$ docker run -d nginx
+$ docker ps -a
+$ docker container ls – list containers in running status
+
+Container will be launched
+Will be up & running
+User will be detached to the container ie: container is running in the background, user can continue working on the host machine
+
+Delete a Container from the host machine
+
+$ docker rm -f containername/conatinerid
+$ docker rm -f n1
+$ docker ps -a : no container will be there
