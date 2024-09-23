@@ -85,6 +85,55 @@ Save the file and run it
 
 # kubectl describe pod pod1
 
+Deployment object in kubernetes:
+====================================
+
+# vim deployment.yml
+
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+ name: mydeploy
+spec:
+ replicas: 4 # replicas == desired pods
+ selector: # it is a query to see how many pods are running with the matching label 
+   matchLabels:
+    app: kubeserve
+ template: # this is pod template to cretae 4 replicas
+  metadata:
+   labels:
+    app: kubeserve   # labels are used to select same pods
+  spec:
+   containers:
+    - name: c1
+      image: leaddevops/kubeserve:v1
+
+
+# kubectl create -f deployment.yml
+
+# kubectl get all
+
+# kubectl get deployment
+
+Scale up and scale down replicas
+
+# kubectl scale deployment mydeploy --replicas=6
+
+# kubectl get all
+
+# kubectl get deployment
+
+Scale down
+
+
+# kubectl scale deployment mydeploy --replicas=2
+
+# kubectl get all
+
+# kubectl get deployment
+
+
+
 
 
 
