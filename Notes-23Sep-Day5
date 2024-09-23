@@ -163,6 +163,11 @@ Monitoring tool - ELK
 =====================================================================
 Deploy spring boot application:
 =====================================
+$ sudo su -
+$ cd
+
+$ git clone https://github.com/Sonal0409/ELKExample.git
+$ cd ELKExample
 
 In the same folder we have a dockerfile. Let us build it:
 
@@ -185,11 +190,7 @@ Localhost:81
 ELK stack setup:
 ===================================
 
-$ sudo su -
-$ cd
 
-$ git clone https://github.com/Sonal0409/ELKExample.git
-$ cd ELKExample
 
 $ docker-compose version
 
