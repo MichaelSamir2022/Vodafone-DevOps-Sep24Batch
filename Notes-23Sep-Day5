@@ -158,6 +158,62 @@ copy the node port -> 5 dight number
 
 go to the browser and give  localhost:<nodeportnumber>
 
+====================================================================
+Monitoring tool - ELK
+=====================================================================
+Deploy spring boot application:
+=====================================
+
+In the same folder we have a dockerfile. Let us build it:
+
+# docker build -t springboot .
+
+Create a container with your new Image:
+
+# docker run -d -p 81:8080 -v /var/log/:/var/log/  springboot
+
+Check the container is running:
+
+# docker ps -a --latest
+
+GO to browser:
+
+Localhost:81
+
+===============================================
+
+ELK stack setup:
+===================================
+
+$ sudo su -
+$ cd
+
+$ git clone https://github.com/Sonal0409/ELKExample.git
+$ cd ELKExample
+
+$ docker-compose version
+
+Install docker-compose tool
+
+Docker compose is a tool to be installed on Docker host
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+docker-compose --version
+
+
+
+$ sysctl -w vm.max_map_count=262144
+
+$ docker-compose up -d
+$ docker ps
+
+
+Browse: http://localhost:5601/app/kibana
+
+
 
 
 
