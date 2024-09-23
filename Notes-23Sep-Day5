@@ -132,7 +132,31 @@ Scale down
 
 # kubectl get deployment
 
+Service obkject --> to access application from the browser of your machine
 
+# vim service.yml
+
+kind: Service
+apiVersion: v1
+metadata: 
+ name: mysvc
+spec:
+ type: NodePort
+ ports:
+  - targetPort: 80  # container port
+    port: 80    # service port --> this port will forward user request to pods
+ selector:
+  app: kubeserve
+
+Save the file
+
+# kubectl create -f service.yml
+
+# kubectl get service
+
+copy the node port -> 5 dight number
+
+go to the browser and give  localhost:<nodeportnumber>
 
 
 
