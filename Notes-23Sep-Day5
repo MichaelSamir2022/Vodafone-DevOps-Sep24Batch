@@ -45,3 +45,15 @@ Step 6:
 #### check if Kube Master is ready or not
 
 # kubectl get nodes
+
+
+For your pod to be scheduled in your master node, remove the taint
+
+
+# kubectl taint node <nodeIP> node-role.kubernetes.io/master:NoSchedule-
+
+Example like this:
+
+# kubectl taint node ip-172-31-24-116 node-role.kubernetes.io/master:NoSchedule-
+
+
