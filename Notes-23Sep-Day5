@@ -56,4 +56,46 @@ Example like this:
 
 # kubectl taint node ip-172-31-24-116 node-role.kubernetes.io/master:NoSchedule-
 
+===============================================
+Create a pod on the node
+===============================
+
+# mkdir mykubefiles
+# cd mykubefiles
+# vim pod-defintion.yml
+
+kind: Pod
+apiVersion: v1
+metadata:
+ name: pod1
+ labels:
+  author: sonal
+  app: webserver
+spec:
+ containers:
+  - name: c1
+    image: nginx
+
+
+Save the file and run it
+
+# kubectl create -f pod-defintion.yml
+
+# kubectl get pods
+
+# kubectl describe pod pod1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
