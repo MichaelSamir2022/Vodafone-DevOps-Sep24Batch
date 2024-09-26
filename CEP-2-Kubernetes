@@ -101,10 +101,10 @@ spec:
         - name: WORDPRESS_DB_PASSWORD
           value: password
 
-# kubectl create -f cep2.yml
+
+
+# kubectl create -f wordpressdeploy.yml
 
 # kubectl get all
 
-# kubectl get deployment
-
-# kubectl get pods
+Go to browser and give http://localhost:<nodeport>
