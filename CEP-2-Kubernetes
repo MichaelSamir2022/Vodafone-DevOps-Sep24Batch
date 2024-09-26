@@ -7,7 +7,7 @@ Connect to Lab and see the kubernetes node is ready
 
 # kubectl delete all --all
 
-# vim cep2.yml
+# vim mysqldeployment.yml
 
 ---
 apiVersion: v1
