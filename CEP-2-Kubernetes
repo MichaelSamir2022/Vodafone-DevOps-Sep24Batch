@@ -1,7 +1,11 @@
 
 Connect to Lab and see the kubernetes node is ready
 
+# sudo su -
+
 # kubectl get nodes
+
+# kubectl delete all --all
 
 # vim cep2.yml
 
