@@ -51,7 +51,9 @@ spec:
           value: password
 
 # kubectl create -f mysqldeployment.yml
+# kubectl get all
 
+# vim wordpressdeploy.yml
 
 ---
 apiVersion: v1
